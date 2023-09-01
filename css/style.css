@@ -145,3 +145,80 @@ table td {
 	text-align: left;
 	padding: 5px 0px;
 }
+
+/*****SKILL SECTION*****/
+.skill {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+.skill-html {
+    width: 95%;
+}
+
+.skill-CSS {
+    width: 91%;
+}
+
+.skill-javascript {
+    width: 80%;
+}
+
+.skill-python {
+    width: 56%;
+}
+
+.skill-RWD {
+    width: 80%;
+}
+
+.skill-ExpressJS {
+    width: 74%;
+}
+
+.skill-MongoDB {
+    width: 87%;
+}
+
+.skill-ReactJS {
+    width: 73%;
+}
+
+.skill-NodeJS {
+    width: 75%;
+}
+
+.skill-HTTP {
+    width: 71%;
+}
+
+.skill-VCS {
+    width: 94%;
+}
+
+.skill-APIs {
+    width: 70%;
+}
+
+.skill-SEO {
+    width: 71%;
+}
+
+.skill span {
+	float: right;
+}
+
+
+.skill div {
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+	background: #d43b3b;
+	border-radius: 10px;
+}
+
+.skill div span {
+	background: #ffbf35;
+	height: 5px;
+	float: left;
+}
