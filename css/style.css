@@ -237,7 +237,7 @@ table td {
 .descrip {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
-    font-size: x-large;
+    font-size: medium;
 }
 
 .service-list {
@@ -265,4 +265,16 @@ table td {
 .service-list p {
 	font-size: 15px;
 	line-height: 25px;
+}
+
+/*PORTFOLIO SECTION*/
+.gallery {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+}
+.gallery img {
+	height: auto;
+	width: 95%;
+	margin-bottom: 20px;
 }
