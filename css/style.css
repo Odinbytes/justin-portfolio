@@ -323,3 +323,17 @@ textarea {
 	font-size: 16px;
 	margin-top: 5px;
 }
+
+/*****FOOTER SECTION*****/
+.footer {
+    margin-top:9%;
+	background-color: #202020;
+	padding: 30px 0px 30px 0px;
+	width: 100%;
+	float: left;
+}
+.footer-sect {
+	color: #b3b3b3;
+    width: 60%;
+    float: right;
+}
