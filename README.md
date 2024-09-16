@@ -9,6 +9,7 @@ Hello! I’m Abwunza, a passionate coder and tech enthusiast on a mission to bui
 - `Web Development`: Crafting responsive and dynamic web applications using HTML, CSS, JavaScript, React.
 - `Software Engineering`: Building robust and scalable software with Python, Java, Django.
 - `Data Analysis`: Turning data into actionable insights with SQL, Python, R.
+- `Data Entry`: By leveraging my Microsoft Excel skills in Data Entry.
 
 *🛠️ Skills & Tools*
 
