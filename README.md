@@ -1,4 +1,4 @@
-Welcome to My Portfolio, where ideas are brought to life!
+Welcome to My Portfolio, where ideas are conceived!
 
 *About Me*
 
