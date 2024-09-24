@@ -1,3 +1,5 @@
+This is a portfolio page initially built with HTML/CSS and Javascript
+
 Welcome to My Portfolio, where ideas are conceived!
 
 *About Me*
