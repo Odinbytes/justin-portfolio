@@ -1,4 +1,4 @@
-This is a portfolio page initially built with HTML/CSS and Javascript
+This is a portfolio page initially built with HTML/CSS and Javascript. It will be improved using React and Vue Js
 
 Welcome to My Portfolio, where ideas are conceived!
 
