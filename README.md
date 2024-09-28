@@ -8,7 +8,7 @@ Hello! I’m Abwunza, a passionate coder and tech enthusiast on a mission to bui
 
 *💻 What I Do*
 
-- `Web Development`: Crafting responsive and dynamic web applications using HTML, CSS, JavaScript, React.
+- `Website Development`: Crafting responsive and dynamic web applications using HTML, CSS, JavaScript, React.
 - `App Development`: Creating interesting and interactive applications.
 - `Software Engineering`: Building robust and scalable software with Python, Java, Django.
 - `Data Analysis`: Turning data into actionable insights with SQL, Python, R.
