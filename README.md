@@ -20,7 +20,6 @@ Hello! I’m Abwunza, a passionate coder and tech enthusiast on a mission to bui
 - `Frameworks`: React, Vuejs, Django, Node.js, GraphQL, FastAPI, Expess.js, Laravel.
 - `Tools`: VS Code, Pycharm, Notepad++, Git, GitHub, GitLab, Docker, Kubernetes, Postman, MongoDB, MySQL, PostgreSQL, Slack, Microsoft Teams, Amazon Web Services.
 
-
 *🌐 Connect With Me*
 
 Feel free to get in touch! I’m always open to collaboration and new opportunities.
