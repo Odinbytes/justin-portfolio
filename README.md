@@ -29,4 +29,3 @@ Feel free to get in touch! I’m always open to collaboration and new opportunit
 - *GitHub*: https://github.com/Odinbytes/
 
 **Skål to new adventures and coding challenges!**
-
