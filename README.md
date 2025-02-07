@@ -1,4 +1,4 @@
-This isa personal portfolio page is initially built with HTML/CSS and Javascript. It will be improved using React and Vue Js later.
+This personal portfolio page is initially built with HTML/CSS and Javascript. It will be improved using React and Vue Js later.
 
 Welcome to My Portfolio, where ideas are brought to life!
 
