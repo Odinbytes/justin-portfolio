@@ -1,0 +1,89 @@
+name: Commit Bot
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'YYYY-MM-DD (oldest date to backfill)'
+        required: true
+      end_date:
+        description: 'YYYY-MM-DD (newest date to backfill, inclusive)'
+        required: true
+      min_commits:
+        description: 'Minimum commits per day'
+        required: false
+        default: '7'
+      max_commits:
+        description: 'Maximum commits per day'
+        required: false
+        default: '12'
+
+  schedule:
+    - cron: '0 6 * * *' # daily run (today only, unless you run with custom range)
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set git identity
+        run: |
+          git config --global user.name "${{ secrets.GH_AUTHOR_NAME }}"
+          git config --global user.email "${{ secrets.GH_AUTHOR_EMAIL }}"
+
+      - name: Make randomized commits (date range)
+        env:
+          START_DATE: ${{ github.event.inputs.start_date }}
+          END_DATE: ${{ github.event.inputs.end_date }}
+          MIN_COMMITS: ${{ github.event.inputs.min_commits || '7' }}
+          MAX_COMMITS: ${{ github.event.inputs.max_commits || '12' }}
+        run: |
+          set -euo pipefail
+          FILE="contrib_log.txt"
+          minc=${MIN_COMMITS}
+          maxc=${MAX_COMMITS}
+
+          echo "Generating commits from $START_DATE to $END_DATE"
+
+          current=$(date -u -d "$START_DATE" +%s)
+          end=$(date -u -d "$END_DATE" +%s)
+
+          while [ $current -le $end ]; do
+            day=$(date -u -d "@$current" +%Y-%m-%d)
+
+            # Randomly skip ~20% of days (about 5–6 days active per week)
+            if [ $((RANDOM % 10)) -lt 2 ]; then
+              echo "Skipping $day (rest day)"
+              current=$(( current + 86400 ))
+              continue
+            fi
+
+            range=$((maxc - minc + 1))
+            commits=$(( (RANDOM % range) + minc ))
+            echo "Creating $commits commits for $day"
+
+            for i in $(seq 1 $commits); do
+              # Randomize time across the day
+              hh=$(printf "%02d" $(( RANDOM % 24 )))
+              mm=$(printf "%02d" $(( RANDOM % 60 )))
+              ss=$(printf "%02d" $(( RANDOM % 60 )))
+              ts="${day}T${hh}:${mm}:${ss}Z"
+
+              echo "Automated entry ${ts} - $RANDOM" >> "$FILE"
+              git add "$FILE"
+              GIT_AUTHOR_DATE="$ts" GIT_COMMITTER_DATE="$ts" git commit -m "chore: automated commit ${ts}" || echo "no changes"
+              sleep 1
+            done
+
+            current=$(( current + 86400 ))
+          done
+
+      - name: Push commits
+        run: git push origin HEAD:main
